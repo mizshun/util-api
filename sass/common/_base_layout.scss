@@ -1,0 +1,124 @@
+@charset "utf-8";
+/*----------------------------------------
+	共通レイアウト
+----------------------------------------*/
+/* ヘッダー */
+#gHeader {
+	@include contentCenter($baseWidth, $baseColor);
+	position: relative;
+	height: 120px;
+	background: #ddd;
+}
+#siteTitle {
+	position: absolute;
+	top: $baseSpace;
+	left: $baseSpace;
+}
+#headerUtilNav {
+	$borderWidth: 1px;
+	$padding: $baseSpace / 2;
+	overflow: hidden;
+	position: absolute;
+	top: $baseSpace;
+	right: $baseSpace;
+	#{$ie6} & {
+		display: inline;
+		zoom: 1;
+	}
+	ul {
+		@extend %cf;
+		margin-left: -$borderWidth;
+		li {
+			float: left;
+			padding: 0 $padding;
+			border-left: $borderWidth solid black;
+		}
+	}
+}
+
+/* グローバルナビ */
+#gNav {
+	$padding: $baseSpace * 2;
+	@include contentCenter($baseWidth, $baseColor);
+	background: #aaa;
+	text-align: center;
+	ul {
+		@extend %cf;
+		li {
+			float: left;
+			a {
+				display: block;
+				width: 120px;
+				height: 48px;
+				background: #888;
+				&:hover {
+					background: #666;
+				};
+			}
+		}
+	}
+}
+
+/* コンテンツ */
+#contents {
+	@include contentCenter($baseWidth, $baseColor);
+	@extend %cf;
+	padding: $baseSpace * 2 0;
+}
+
+/* メインコンテンツ */
+#mainContents {
+	float: right;
+	width: $baseMainWidth;
+	background: #ddd;
+}
+
+/* サイドバー */
+#subContents {
+	float: left;
+	width: $baseSideWidth;
+	background: #ddd;
+}
+#subContentsNav {
+	$borderWidth: 1px;
+	$padding: $baseSpace * 2;
+	ul {
+		li {
+			a {
+				display: block;
+				padding: $padding;
+				background: #ccc;
+				text-align: center;
+				&:hover {
+					background: #bbb;
+				}
+			}
+		}
+	}
+}
+
+/* フッター */
+#gFooter {
+	@include contentCenter($baseWidth, $baseColor);
+	background: #ddd;
+	text-align: center;
+}
+#footerUtilNav {
+	$borderWidth: 1px;
+	$padding: $baseSpace / 2;
+	display: inline-block;
+	overflow: hidden;
+	#{$ie6} & {
+		display: inline;
+		zoom: 1;
+	}
+	ul {
+		@extend %cf;
+		margin-left: -$borderWidth;
+		li {
+			float: left;
+			padding: 0 $padding;
+			border-left: $borderWidth solid black;
+		}
+	}
+}

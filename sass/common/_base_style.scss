@@ -1,0 +1,72 @@
+@charset "utf-8";
+/*----------------------------------------
+	基本スタイル
+----------------------------------------*/
+body {
+	background: $baseBgColor;
+	font-family: $baseFontFamily;
+	font-size: $baseFontSize;
+	color: $baseFontColor;
+	// line-height: $baseLineHeight;
+}
+
+/*
+Font-size list (base: 13px)
+ 62% =  8px
+ 70% =  9px
+ 77% = 10px
+ 85% = 11px  162% = 21px  239% = 31px
+ 93% = 12px  170% = 22px  247% = 32px
+100% = 13px  177% = 23px  254% = 33px
+108% = 14px  185% = 24px  262% = 34px
+116% = 15px  193% = 25px  270% = 35px
+124% = 16px  200% = 26px  277% = 36px
+131% = 17px  208% = 27px  285% = 37px
+139% = 18px  216% = 28px  293% = 38px
+147% = 19px  224% = 29px  300% = 39px
+154% = 20px  231% = 30px  308% = 40px
+*/
+h1 {
+	font-size: 185%;
+}
+
+h2 {
+	font-size: 154%;
+}
+
+h3 {
+	font-size: 124%;
+}
+
+h4 {
+	font-size: 100%;
+}
+
+h5 {
+	font-size: 100%;
+}
+
+h6 {
+	font-size: 100%;
+}
+
+a {
+	color: $baseLink;
+	&:visited {
+		color: $baseLinkV;
+	}
+	&:hover {
+		color: $baseLinkH;
+		text-decoration: none;
+	}
+	&:active {
+		color: $baseLinkA;
+	}
+}
+
+::selection {
+	background: #ffb7b7;
+	}
+::-moz-selection {
+	background: #ffb7b7;
+}

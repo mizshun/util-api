@@ -1,0 +1,273 @@
+@charset "utf-8";
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+
+body {
+	line-height: 1;
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+img {
+	vertical-align: bottom;
+}
+
+・blockquote, q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+
+hr {
+	border: none;
+	border-top: 1px dotted #ccc;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+caption, th {
+	text-align: left;
+}
+
+caption {
+	display: none;
+}
+
+input,
+select,
+textarea {
+	font-size: 100%;
+	color: #333333;
+	vertical-align: middle;
+}
+
+legend {
+	display: none;
+}
+
+/* clearfix */
+#headerUtilNav ul, #gNav ul, #contents, #footerUtilNav ul {
+	zoom: 1;
+}
+#headerUtilNav ul:after, #gNav ul:after, #contents:after, #footerUtilNav ul:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+/*----------------------------------------
+	基本スタイル
+----------------------------------------*/
+body {
+	background: white;
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", sans-serif;
+	font-size: 13px;
+	color: #333333;
+}
+
+/*
+Font-size list (base: 13px)
+ 62% =  8px
+ 70% =  9px
+ 77% = 10px
+ 85% = 11px  162% = 21px  239% = 31px
+ 93% = 12px  170% = 22px  247% = 32px
+100% = 13px  177% = 23px  254% = 33px
+108% = 14px  185% = 24px  262% = 34px
+116% = 15px  193% = 25px  270% = 35px
+124% = 16px  200% = 26px  277% = 36px
+131% = 17px  208% = 27px  285% = 37px
+139% = 18px  216% = 28px  293% = 38px
+147% = 19px  224% = 29px  300% = 39px
+154% = 20px  231% = 30px  308% = 40px
+*/
+h1 {
+	font-size: 185%;
+}
+
+h2 {
+	font-size: 154%;
+}
+
+h3 {
+	font-size: 124%;
+}
+
+h4 {
+	font-size: 100%;
+}
+
+h5 {
+	font-size: 100%;
+}
+
+h6 {
+	font-size: 100%;
+}
+
+a {
+	color: #1d1daf;
+}
+a:visited {
+	color: #df2222;
+}
+a:hover {
+	color: #1d1daf;
+	text-decoration: none;
+}
+a:active {
+	color: #1d1daf;
+}
+
+::selection {
+	background: #ffb7b7;
+}
+
+::-moz-selection {
+	background: #ffb7b7;
+}
+
+/*----------------------------------------
+	共通レイアウト
+----------------------------------------*/
+/* ヘッダー */
+#gHeader {
+	width: 960px;
+	margin: 0 auto;
+	background: #eeeeee;
+	position: relative;
+	height: 120px;
+	background: #ddd;
+}
+
+#siteTitle {
+	position: absolute;
+	top: 8px;
+	left: 8px;
+}
+
+#headerUtilNav {
+	overflow: hidden;
+	position: absolute;
+	top: 8px;
+	right: 8px;
+}
+* html #headerUtilNav {
+	display: inline;
+	zoom: 1;
+}
+#headerUtilNav ul {
+	margin-left: -1px;
+}
+#headerUtilNav ul li {
+	float: left;
+	padding: 0 4px;
+	border-left: 1px solid black;
+}
+
+/* グローバルナビ */
+#gNav {
+	width: 960px;
+	margin: 0 auto;
+	background: #eeeeee;
+	background: #aaa;
+	text-align: center;
+}
+#gNav ul li {
+	float: left;
+}
+#gNav ul li a {
+	display: block;
+	width: 120px;
+	height: 48px;
+	background: #888;
+}
+#gNav ul li a:hover {
+	background: #666;
+}
+
+/* コンテンツ */
+#contents {
+	width: 960px;
+	margin: 0 auto;
+	background: #eeeeee;
+	padding: 16px 0;
+}
+
+/* メインコンテンツ */
+#mainContents {
+	float: right;
+	width: 744px;
+	background: #ddd;
+}
+
+/* サイドバー */
+#subContents {
+	float: left;
+	width: 200px;
+	background: #ddd;
+}
+
+#subContentsNav ul li a {
+	display: block;
+	padding: 16px;
+	background: #ccc;
+	text-align: center;
+    float: left;
+    clear: left;
+}
+#subContentsNav ul li a:hover {
+	background: #bbb;
+}
+
+/* フッター */
+#gFooter {
+	width: 960px;
+	margin: 0 auto;
+	background: #eeeeee;
+	background: #ddd;
+	text-align: center;
+}
+
+#footerUtilNav {
+	display: inline-block;
+	overflow: hidden;
+}
+* html #footerUtilNav {
+	display: inline;
+	zoom: 1;
+}
+#footerUtilNav ul {
+	margin-left: -1px;
+}
+#footerUtilNav ul li {
+	float: left;
+	padding: 0 4px;
+	border-left: 1px solid black;
+}
